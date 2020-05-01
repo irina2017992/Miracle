@@ -1,0 +1,492 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+header, footer {
+    width: 98%;
+    background-color: #fff;
+}
+
+body {
+    background-color:#faccd5;
+    color: #333;
+    width: 100%;
+    height: 100%; 
+}
+
+
+/* Header */
+
+
+header {
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("https://krot.info/uploads/posts/2020-01/1579228617_17-78.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;    
+}
+
+.header_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;   
+}
+
+.header_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header h1 {
+    position: relative;
+}
+
+.logo {
+    margin-right: 20px;
+    color:#f8b4c1;
+    width: 100px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.irina {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.search {
+    margin-left: 40px;
+    width: 150px;
+    height: 25px;
+    /* flex-basis: 50%; */
+}
+
+.auth, .reg{
+    color: #B1D4C0;
+    margin-left: 30px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    transition: font-size .3s;
+}
+
+.reg:hover {
+    font-size: 40px;
+}
+
+.auth:hover {
+    font-size: 40px;
+}
+ 
+/* ВОПРОС 1. Псевдокласс можно задать только одному классу? Когда пыталась объединить .reg и .auth (.auth, .reg:hover {}), не сработало. Пробел также убирала. */
+
+input {
+    border-radius: 5px;
+    border: 2px solid silver;
+    padding: 5px;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid #B1D4C0;
+}
+
+
+/* Main */
+/* Menu */
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    max-width: 100%;
+    margin: 20px 30px 40px 20px;
+}
+
+.nav a {
+    margin: 30px;    
+    transition: font-size font-weight 2s;
+    color: #545557;
+    font-size: 30px;
+}
+
+/* ВОПРОС 2. Почему через комбинированные селекторы выше (.nav a) не получается подключить font-style? Все остальные св-ва работают. Сам шрифт пришлось подключать каждому элементу отдельно через файл HTML. */
+
+.nav a:hover {
+    background-color: #B1D4C0;
+    border-radius: 5%;
+    padding: 5px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/* About me */
+
+
+.img_me {
+    height: 700px;
+    width: auto;   
+    padding: 10px;
+    border-style: inset; 
+    margin-right: 70px;
+    border-color: #B1D4C0;
+    border-width: 10px;
+    position: relative;
+}
+
+.welcome {
+    margin: 30px 70px 50px 0;
+    align-self: center;
+}
+
+.contact_block {
+    width: 60%;
+    background-color: rgba(241, 250, 235, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    transition: width .5s;
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-right: 70px;
+}
+
+.contact_block:hover {
+    width: 90%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.contact {
+    color: rgb(62, 73, 67);
+    transition: color .1s;
+    -webkit-transition: color .1s;
+    -moz-transition: color .1s;
+    -o-transition: color .1s;
+}
+
+/* ВОПРОС 3. Надо ли писать transition отдельно для каждого браузера? */
+
+.contact:hover {
+    color: rgb(32, 202, 46);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+a:active {
+    color:rgb(41, 73, 55);
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 30px;
+}
+
+.main_right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_left {
+    width: 70%;
+    margin-left: 70px;
+}
+
+.main_text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.main_text_p {
+    padding-bottom: 15px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.main_block1 {
+    display: flex;
+    flex-direction: column;     
+}
+
+.main_center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+    background-color: rgba(241, 250, 235, 0.7);     
+    min-height: 200px;
+    border-radius: 10px;
+    transition: width.3s;
+}
+
+.main_center h2 {
+    align-self: center;
+}
+
+.main_center:hover {
+    width: 95%;
+    align-items: center;
+}
+
+
+.main_me {
+    width: 70%;      
+}
+
+.main_education {
+    width: 70%;
+}
+
+.main_work {
+    width: 70%;
+}
+
+table {
+    font-family: sans-serif;
+    border-radius: 20px;
+    border-collapse: separate;
+    border-spacing: 5px;
+    height: 100px;
+    background-color: #ece9e0;
+    color: black;
+    font-size: 15px;
+    border: 6px solid #ece9e0;
+}
+
+th {
+    font-size: 18px;
+    padding: 10px;
+}
+
+td {
+    background-color: #faccd5;
+    padding: 10px;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+.main_h2 {
+    margin-bottom: 20px;
+    background-color:rgba(177, 212, 192, 0.616);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Articles for trips */
+
+
+.hobby_web_h2 {
+    margin: 20px 20px;
+    display: inline-block;
+    background-color: #faccd5;;
+    padding: 5px;
+    border-radius: 5px;
+    color: black; 
+}
+
+.announce {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.articles {
+    width: 100%;
+    display: flex;   
+    justify-content: space-between;
+}
+
+.main_hobby {
+    background-image: url('img/back.jpg');
+    width: 90%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.trip {
+    width: 20%;
+    flex-grow: 20%;
+    margin: auto;
+    text-align: center;
+}
+
+.all_articles {
+    display: flex;
+    flex-grow: 60%;
+    width: 50%;
+}
+
+article {
+    width: 150px;
+    border: 1px solid silver;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fafafa;
+    margin-right: 2%;
+}
+
+.img_art {
+    width: 148px;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid silver;
+    margin-bottom: 10px;
+}
+
+.h2_art {
+    width: 90%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.p_art {
+    width: 80%;
+    margin-left: 10%;
+    text-indent: 1.7em;
+}
+
+.a_art {
+    border-radius: 10px;
+    background-color: khaki;
+    color: black;
+    padding: 3px; 
+    margin: 20px 0px;
+    display: block;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+ .quote {
+    width: 30%;
+    flex-grow: 20%;
+    margin: auto;
+    background-color: rgba(241, 250, 235, 0.973);
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+    font-size: 1.2em;
+}
+
+.quote:hover {
+    transform: translate(50px,0px);     
+}
+
+.after_art {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+
+/* Путь разработчика */
+
+
+
+.main_web {
+    background-image: url("img/back2.jpg");
+    width: 90%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+
+#Web {
+    margin-top: 20px;
+}
+
+
+.main_web_right_left {
+    display: flex;
+    width: 90%;
+}
+
+.web_left {
+    width: 60%;
+    margin: 0px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.web_right {
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.web_timetable {
+    background-color:rgba(241, 250, 235, 0.973);
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.web_timetable:hover {
+    transform: translate(100px,0px);
+}
+
+
+/* Footer */
+
+
+footer {
+    border-top: 2px solid silver;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+footer {
+    text-align: center;
+    background-image: url("https://krot.info/uploads/posts/2020-01/1579228617_17-78.jpg");
+}
+
+.rights {
+    padding-top: 20px;
+    font-size: 1.5em;
+}
+
+.skill {
+    padding-bottom: 20px;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+/* Selection block */
+
+
+::selection {background-color:rgb(177, 212, 192); color:black;}
+
+
+
+
